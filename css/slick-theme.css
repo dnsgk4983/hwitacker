@@ -1,0 +1,133 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+    z-index: 999;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.slick-prev
+{
+    left: -90px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: 0;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: url(../images/ico_left_arrow.png);
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: url(../images/ico_left_arrow.png);
+}
+
+.slick-next
+{
+    right: -90px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: 0px;
+}
+.slick-next:before
+{
+    content: url(../images/ico_right_arrow.png);
+}
+[dir='rtl'] .slick-next:before
+{
+    content: url(../images/ico_right_arrow.png);
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: .5em;
+
+    display: block;
+
+    right: 2em;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+    margin: 0 3px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button
+{
+    display: block;
+    
+    width: 12px;
+    height: 12px;
+    
+    cursor: pointer;
+    margin: 0 auto;
+    color: transparent;
+    border: 0;
+    border-radius: 12px;
+    outline: none;
+    background: #5299ED;
+}
+.slick-dots .slick-active button{
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #5299ED;
+}
+
