@@ -1298,3 +1298,11 @@ li{
 .fd-icon{
   width: 100%;
 }
+.fd-flex{
+  display: flex;
+  text-align: center;
+}
+
+.fd-item.text-right .fd-flex{
+  justify-content: flex-end;
+}
