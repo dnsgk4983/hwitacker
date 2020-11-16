@@ -6,20 +6,11 @@
 
 jQuery(document).ready(function($) {
 
-	$('.main--banner').owlCarousel({
-		items: 4,
-		// center: true,
-		loop: true,
-		autoplay: true,
-		navigation: false,
-		navigationText : false,
-	});
-
-	$('.taker-list').owlCarousel({
-		items: 8,
-		nav: true,
-		navigationText: ["<", ">"],
-	});
+	let swiper1 = new Swiper('.swiper1', {
+		slidesPerView: 5,
+		spaceBetween: 0,
+		pagination: false,
+	})
 
 	"use strict";
 
