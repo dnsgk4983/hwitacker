@@ -1228,6 +1228,7 @@ main{
   justify-content: space-between;
   max-width: 1640px;
   max-height: 600px;
+  margin: 0 auto;
   margin-top: 3em;
 }
 
@@ -1258,12 +1259,9 @@ main{
 
 /* 메인 차트 탭영역 */
 .taker-list{
-  display: flex;
-  align-items: center;
   text-align: center;
-  padding-left: 1.75em;
+  padding: 0 1.75em;
   margin: 0;
-  border: 1px solid #dddddd;
 }
 .taker-list li a{
   color: #000;
@@ -1290,12 +1288,18 @@ li{
   color: #236ddc;
 }
 
-.taker-list .swiper-button-prev{
+.taker-tab .swiper-slide{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.taker-tab .swiper-button-prev{
   position: absolute;
   top: 0;
-  left: -1px;
-  height: 100%;
+  left: 0;
+  height: 58px;
   border: 1px solid #dcdcdc;
+  text-align: center;
   line-height: 3.5em;
   margin-top: 0;
   color: #000;
@@ -1303,20 +1307,21 @@ li{
   background: #efefef;
   z-index: 999;
 }
-.taker-list .swiper-button-prev:after{
+.taker-tab .swiper-button-prev:after{
   content: none;
 }
 
-.taker-list li.swiper-slide > a{
+.taker-tab li.swiper-slide > a{
   display: block;
   padding: 1em 0;
 }
 
-.taker-list .swiper-button-next{
+.taker-tab .swiper-button-next{
   position: absolute;
   top: 0;
-  right: -1px;
-  height: 100%;
+  right: 0;
+  height: 58px;
+  text-align: center;
   border: 1px solid #dcdcdc;
   line-height: 3.5em;
   margin-top: 0;
@@ -1325,38 +1330,110 @@ li{
   background: #efefef;
   z-index: 999;
 }
-.taker-list .swiper-button-next:after{
+.taker-tab .swiper-button-next:after{
   content: none;
 }
 
+
+/* 메인 차트 영역 */
+.chart-wrap{
+  max-width: 622px;
+  margin: 6em auto 0;
+}
 /* 메인 스틱 차트 */
+
+.info-card {
+  display: none;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #c8c8c8;
+  width: 110px;
+  text-align: center;
+  z-index: 2;
+  justify-content: center;
+  align-items: content;
+}
+
+.info-card .arrow {
+  border-style: solid;
+  position: absolute;
+  border-color: #c8c8c8 transparent transparent transparent;
+  border-width: 8px 8px 0px 8px;
+  bottom: -8px;
+  left: 45px;
+}
+
+.bar-graph-container {
+  width: 38%;
+  height: 240px;
+  display: inline-block;
+  min-width: 340px;
+  margin-left: 3%;
+  position: relative;
+}
+
+.x-axis-label {
+  position: relative;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.progress-bar{
+  background: transparent;
+  color: #777777;
+}
+
+.y-axis-labels {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  float: left;
+  margin-right: 3%;
+  margin-top: -10px;
+  text-align: right;
+  font-size: 9px;
+}
 
 .vertical .progress-bar {
   float: left;
-  height: 300px;
-  width: 40px;
-  margin-right: 25px;
+  height: 100%;
+  width: 12%;
+  margin-right: 8%;
+  text-align: center;
 }
 
 .vertical .progress-track {
   position: relative;
-  width: 40px;
   height: 100%;
-  background: #ebebeb;
+  background: #f5f6f8;
 }
 
 .vertical .progress-fill {
   position: relative;
-  background: #825;
+  background: #ced4e2;
   height: 50%;
-  width: 40px;
+  width: 90%;
   color: #fff;
+  overflow: hidden;
   text-align: center;
-  font-family: "Lato","Verdana",sans-serif;
   font-size: 12px;
   line-height: 20px;
 }
 
+.vertical .progress-fill span{
+  display: none;
+}
+
+.vertical .progress-fill.hot{
+  background: #5394f0;
+}
+
+.vertical .progress-fill.hot p{
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: .75em;
+}
 
 
 

@@ -15,7 +15,24 @@ jQuery(document).ready(function($) {
 		  'height' : percent,
 		  'top' : pTop
 		});
-	});
+	  });
+	  
+	  $('.progress-fill').on('mousemove', displayTooltip);
+	  $('.progress-fill').on('mouseleave', hideTooltip);
+	  
+	  function displayTooltip(e) {
+		var x = e.pageX; 
+		var y = e.pageY;
+		$('.info-card').css('display', 'inline-flex');
+		$('.info-card').css('position', 'absolute');
+		$('.info-card').css('left', x - 55);
+		$('.info-card').css('top', y - 70);
+		$('.info-card').children('.card-text').text($(this).text());
+	  }
+	  
+	  function hideTooltip() {
+		$('.info-card').css('display', 'none');
+	  }
 
 	let swiper1 = new Swiper('.swiper1', {
 		slidesPerView: 5,
