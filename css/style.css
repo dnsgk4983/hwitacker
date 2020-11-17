@@ -1150,6 +1150,31 @@ p{
 }
 
 
+
+
+
+/* css 사이즈 정의 */
+
+
+/* 대제목 */
+h1{
+  font-size: 2.25em;
+  font-family: 'Noto Sans 700'; /* 노토산스 bold */
+}
+
+/* 중제목 */
+h2{
+  font-size: 1.75em;
+  font-family: 'Noto Sans 700';
+}
+
+/* 소제목 */
+h3{
+  font-size: 1.25em;
+}
+
+/* 기본 폰트사이즈는 16px 이며, margin 및 padding 값에 em을 활용 */
+
 /* 템플릿 수정 */
 .cta span{
   padding: 10px 30px !important;
@@ -1183,12 +1208,18 @@ main{
   padding-left: .75em;
 }
 
+
+/* 메인 스와이퍼 영역 */
 .main--section .swiper1{
   padding: 0 0 0 1em;
 }
 
 .main--section .swiper1 a, .main--section .swiper1 img{
   width: 100%;
+}
+
+.main--section .swiper1 .swiper-slide{
+  margin: 0 1em; /* 1em = 16px */
 }
 
 
@@ -1216,11 +1247,21 @@ main{
   border-bottom: 1px solid #000;
 }
 
+
+
+
+
+
+
+
+
+
+/* 메인 차트 탭영역 */
 .taker-list{
   display: flex;
   align-items: center;
   text-align: center;
-  padding-left: 0;
+  padding-left: 1.75em;
   margin: 0;
   border: 1px solid #dddddd;
 }
@@ -1248,6 +1289,76 @@ li{
 .taker-count span{
   color: #236ddc;
 }
+
+.taker-list .swiper-button-prev{
+  position: absolute;
+  top: 0;
+  left: -1px;
+  height: 100%;
+  border: 1px solid #dcdcdc;
+  line-height: 3.5em;
+  margin-top: 0;
+  color: #000;
+  display: block;
+  background: #efefef;
+  z-index: 999;
+}
+.taker-list .swiper-button-prev:after{
+  content: none;
+}
+
+.taker-list li.swiper-slide > a{
+  display: block;
+  padding: 1em 0;
+}
+
+.taker-list .swiper-button-next{
+  position: absolute;
+  top: 0;
+  right: -1px;
+  height: 100%;
+  border: 1px solid #dcdcdc;
+  line-height: 3.5em;
+  margin-top: 0;
+  color: #000;
+  display: block;
+  background: #efefef;
+  z-index: 999;
+}
+.taker-list .swiper-button-next:after{
+  content: none;
+}
+
+/* 메인 스틱 차트 */
+
+.vertical .progress-bar {
+  float: left;
+  height: 300px;
+  width: 40px;
+  margin-right: 25px;
+}
+
+.vertical .progress-track {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  background: #ebebeb;
+}
+
+.vertical .progress-fill {
+  position: relative;
+  background: #825;
+  height: 50%;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato","Verdana",sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+
 
 
 /* 우측영역 */

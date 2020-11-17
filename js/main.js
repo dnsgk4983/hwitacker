@@ -6,11 +6,34 @@
 
 jQuery(document).ready(function($) {
 
+	// 차트
+	
+	$('.vertical .progress-fill span').each(function(){
+		var percent = $(this).html();
+		var pTop = 100 - ( percent.slice(0, percent.length - 1) ) + "%";
+		$(this).parent().css({
+		  'height' : percent,
+		  'top' : pTop
+		});
+	});
+
 	let swiper1 = new Swiper('.swiper1', {
 		slidesPerView: 5,
 		spaceBetween: 0,
 		pagination: false,
-	})
+	});
+
+	let swiper2 = new Swiper('.taker-tab', {
+		slidesPerView: 7,
+		pagination: false,
+		navigation: {
+			nextEl: '.taker-tab .swiper-button-next',
+			prevEl: '.taker-tab .swiper-button-prev',
+		  },
+	});
+
+	
+
 
 	"use strict";
 
