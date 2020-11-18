@@ -747,8 +747,6 @@ p{
 }
 
 .site-mobile-menu .site-mobile-menu-body {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   position: relative;
   padding: 0 20px 20px 20px;
   height: calc(100vh - 52px);
@@ -1123,26 +1121,11 @@ p{
 }
 
 .footer-section {
-  padding: 7em;
+  padding: 3.125em 0 6.9375em 9.5em;
   background: #272726 !important;
+  color: #fff;
 }
 
-.footer-section p {
-  font-size: 1rem;
-}
-
-.footer-section h3 {
-  font-size: .9rem;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 1.5rem;
-  font-weight: 900;
-}
-
-.footer-section .footer-links li {
-  margin-bottom: 10px;
-}
 
 .process,
 .service {
@@ -1493,4 +1476,88 @@ li{
 
 .fd-item.text-right .fd-flex{
   justify-content: flex-end;
+}
+
+
+/* 푸터 영역 */
+.footer-logo{
+  padding-top: 8.25em;
+}
+
+.ml-auto h3{
+  margin-bottom: 2.5625em;
+  font-size: 1.125em;
+}
+
+.footer-links p{
+  font-size: .75em;
+  margin-bottom: 1.25em;
+}
+.footer-links b{
+  margin-right: 0.625em;
+}
+.footer-links a{
+  font-size: .75em;
+  color: #fff;
+}
+
+.opening h3{
+  margin-bottom: 2.5625em;
+  font-size: 1.125em;
+}
+
+.opening p{
+  font-size: .75em;
+  margin-bottom: 1.25em;
+}
+
+.opening b{
+  margin-right: .625em;
+}
+
+/* 준비되지않은 페이지 */
+.unready{
+  width: 100%;
+  height: 100%;
+  padding: 20em 0;
+  background: #e9e9e9;
+}
+.unready h2{
+  text-align: center;
+  color: #636363;
+}
+
+/* 서브 nav css */
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+.sub-nav{
+  height: 75px;
+  line-height: 75px;
+  border-top: 2px solid #afafaf;
+  border-bottom: 1px solid #d3d3d3;
+}
+.sub-nav-wrap > .row{
+  max-width: 1660px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.sub-nav-wrap .flexb-box a{
+  line-height: 1em;
+  margin: 0 2em;
+}
+
+.sub-nav-wrap .flex-box a.on{
+  display: block;
+  max-width: 134px;
+  width: 100%;
+  padding: .75em 0;
+  text-align: center;
+  background: #236ddc;
+  border-radius: 2em;
+  color: #fff;
 }
