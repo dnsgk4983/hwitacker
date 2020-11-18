@@ -1546,18 +1546,41 @@ li{
   margin: 0 auto;
 }
 
-.sub-nav-wrap .flexb-box a{
-  line-height: 1em;
-  margin: 0 2em;
+.sub-nav-wrap .flex-box{
+  width: 300px;
 }
 
-.sub-nav-wrap .flex-box a.on{
+.sub-nav-wrap .flex-box a{
+  line-height: 1em;
   display: block;
   max-width: 134px;
   width: 100%;
   padding: .75em 0;
   text-align: center;
+  color: #afafaf;
+}
+
+.sub-nav-wrap .flex-box a.on{
+  
   background: #236ddc;
   border-radius: 2em;
   color: #fff;
+}
+
+.user-info-wrap{
+  max-width: 1365px;
+  max-height: 674px;
+  margin: 0 auto;
+  border-radius: 2em;
+  background: #fff;
+  padding: 5.4375em 8.8125em;
+}
+
+.user-info-wrap > div {
+  display: flex;
+}
+
+.user-info-wrap h3{
+  max-width: 337px;
+  width: 100%;
 }
