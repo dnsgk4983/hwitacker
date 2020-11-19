@@ -1798,3 +1798,26 @@ li{
 .mp-btn-wrap a:first-child{
   border-right: 1px solid #C4C4C4;
 }
+
+/* 프로필 정보수정 */
+.w1640{
+  max-width: 1640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.w1640 > .container-fluid > .row{
+  justify-content: space-between;
+}
+
+.profile-wrap{
+  max-width: 49%;
+  width: 49%;
+  min-height: 452px;
+  height: 100%;
+  border: 1px solid #939393;
+  border-radius: 1em;
+  background: #fff;
+  margin-bottom: 3em;
+  padding: 2.625em 3.9375em 2.25em;
+}
