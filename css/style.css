@@ -723,10 +723,6 @@ p{
   transition: .3s all ease;
 }
 
-.site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span:hover {
-  color: #dee2e6;
-}
-
 .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo {
   float: left;
   margin-top: 10px;
@@ -747,7 +743,7 @@ p{
 }
 
 .site-mobile-menu .site-mobile-menu-body {
-  position: relative;
+  /* position: relative; */
   padding: 0 20px 20px 20px;
   height: calc(100vh - 52px);
   padding-bottom: 150px;
@@ -1177,10 +1173,33 @@ section{
   padding-top: 113px;
 }
 
+/* 인트로 css */
+.main{
+  width: 100%;
+  padding: 20em 0;
+  background: url(../images/main.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.intro--section h2{
+  color: #fff;
+  margin-top: 1em;
+  line-height: 2em;
+}
+
+.intro--section img{
+  width: 15%;
+  min-width: 114px;
+}
+
 /* 메인 css */
 main{
   padding: 3em 0;
   background: #e9e9e9;
+}
+.pd--25{
+  padding: 1.5625em 0;
 }
 
 .taker-title{
@@ -1537,6 +1556,7 @@ li{
   line-height: 75px;
   border-top: 2px solid #afafaf;
   border-bottom: 1px solid #d3d3d3;
+  background: #e9e9e9;
 }
 .sub-nav-wrap > .row{
   max-width: 1660px;
@@ -1567,20 +1587,146 @@ li{
   color: #fff;
 }
 
+/* 사용자 정보 페이지 */
+
+.user-info-title h2{
+  margin-bottom: 5em;
+}
+
 .user-info-wrap{
   max-width: 1365px;
-  max-height: 674px;
   margin: 0 auto;
   border-radius: 2em;
   background: #fff;
-  padding: 5.4375em 8.8125em;
+  padding: 5.4375em 8.8125em 6.25em;
 }
 
 .user-info-wrap > div {
   display: flex;
+  align-items: center;
+}
+.user-info-wrap > div:not(:last-child){
+  margin-bottom: 6.9375em;
 }
 
 .user-info-wrap h3{
   max-width: 337px;
   width: 100%;
+  font-size: 2.125em;
+}
+
+.user-info-wrap input{
+  border: none;
+  border-radius: 2em;
+  font-size: 2.125em;
+  text-align: center;
+  background: #f2f2f2;
+  padding: 26px 0;
+  outline: none;
+}
+
+.user-name input{
+  max-width: 269px;
+  width: 100%;
+}
+
+.user-phone input{
+  max-width: 405px;
+  width: 100%;
+}
+.user-email input{
+  max-width: 569px;
+  width: 100%;
+}
+
+.user-info-wrap button{
+  border: none;
+  color: #FFF;
+  border-radius: 1em;
+  padding: .25em 1.5em;
+  background: #236ddc;
+  margin-left: 2em;
+}
+
+.user-btn-wrap{
+  text-align: center;
+  margin: 5em 0 3em;
+}
+.user-btn-wrap button{
+  font-size: 1.5em;
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  background: #848484;
+  padding: .5em 2em;
+  margin: 0 1em;
+}
+
+.user-btn-wrap button.blue{
+  background: #236ddc;
+}
+
+/* 로그인 팝업 창 */
+.login-popup{
+  max-width: 708px;
+  max-height: 419px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  display: none;
+}
+
+.login-title{
+  margin-top: 4em;
+}
+.login-title h2{
+  font-size: 2.625em;
+}
+.login-close{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 9999;
+}
+
+.login-ment p{
+  font-size: 1.5em;
+  color: #c4c4c4;
+}
+
+.login-btn {
+  margin-top: 7em;
+}
+.login-btn button{
+  max-width: 582px;
+  max-height: 88px;
+  width: 100%;
+  height: 100%;
+  line-height: 88px;
+  text-align: center;
+  color: #381e1f;
+  background: #f9e000;
+  border: none;
+  border-radius: .5em;
+  font-size: 2em;
+  font-family: "Noto Sans 700";
+}
+
+/* 마이페이지 팝업css */
+.mp-popup{
+  max-width: 805px;
+  width: 100%;
+  max-height: 393px;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #fff;
 }
