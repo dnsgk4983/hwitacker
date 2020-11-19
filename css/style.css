@@ -1730,3 +1730,62 @@ li{
   right: 0;
   background: #fff;
 }
+
+.mp-popup .container{
+  padding: 0;
+}
+.mp-popup .row{
+  margin: 0;
+}
+
+.mp-popup .col-12{
+  padding: 0;
+}
+.mp-popup .col-6{
+  padding: 0;
+}
+/* 마이페이지 팝업 상단 */
+.mp-top{
+  padding: 3em 4em;
+}
+
+.mp-top .mp-username{
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+.mp-top .mp-username a{
+  font-size: 1.5em;
+  font-family: 'Noto Sans 700';
+}
+.mp-top .mp-logout a{
+  padding: .25em .5em;
+  border: 1px solid #C4C4C4;
+}
+
+.mp-top .interested{
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+.mp-top .interested-images img{
+  width: 3em;
+  margin: 0 .5em;
+}
+
+
+/* 마이페이지 팝업 하단 */
+.mp-btn-wrap{
+  display: flex;
+  border-top: 1px solid #C4C4C4;
+  margin-top: .4em;
+}
+.mp-btn-wrap a{
+  display: block;
+  width: 50%;
+  height: 3.9375em;
+  line-height: 3.9375em;
+  font-size: 2em;
+  text-align: center;
+}
+.mp-btn-wrap a:first-child{
+  border-right: 1px solid #C4C4C4;
+}
