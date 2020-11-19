@@ -1677,7 +1677,7 @@ li{
   right: 0;
   margin: 0 auto;
   position: absolute;
-  top: 50%;
+  top: 30%;
   display: none;
 }
 
@@ -1712,7 +1712,7 @@ li{
   color: #381e1f;
   background: #f9e000;
   border: none;
-  border-radius: .5em;
+  border-radius: .25em;
   font-size: 2em;
   font-family: "Noto Sans 700";
 }
@@ -1725,10 +1725,11 @@ li{
   height: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
   right: 0;
   background: #fff;
+  z-index: 999;
   display: none;
 }
 
@@ -1746,6 +1747,11 @@ li{
   padding: 0;
 }
 /* 마이페이지 팝업 상단 */
+.mp-close{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
 .mp-top{
   padding: 3em 4em;
 }

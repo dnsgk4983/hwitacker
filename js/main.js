@@ -6,6 +6,24 @@
 
 jQuery(document).ready(function($) {
 
+	// 인트로 페이지 로그인 팝업 jQuery
+	$('.cta a').on('click', function(){
+		$('.login-popup').css('display','block');
+	});
+	$('.login-close a').on('click',function(){
+		$('.login-popup').css('display', 'none');
+	});
+
+	// 메인페이지 마이페이지 팝업 jQuery
+
+	$('.toggle-mp').on('click',function(){
+		$('.mp-popup').css('display','block');
+	});
+	$('.mp-close').on('click',function(){
+		$('.mp-popup').css('display','none');
+	});
+
+
 	// 차트
 	
 	$('.vertical .progress-fill span').each(function(){
@@ -48,7 +66,8 @@ jQuery(document).ready(function($) {
 			prevEl: '.taker-tab .swiper-button-prev',
 		  },
 	});
-
+	
+	
 	
 
 
