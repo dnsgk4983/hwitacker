@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
     <link rel="stylesheet" href="css/style.css">
     
   </head>
@@ -119,104 +121,65 @@
                 </div>
             </div>
         </div>
-        <main class="profile-section">
-        <div class="w1640">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 col-12 profile-wrap">
+        <main class="community--section">
+            <div class="container">
                 <div class="row">
-                  <div class="col-12 profile-title">
-                      <h2>창업in 프로필</h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 profile-contents">
-                    <h2>게시글 : <span>00개</span></h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 profile-contents">
-                    <h2>댓글 : <span>00개</span></h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 profile-contents">
-                    <h2>좋아요 : <span>00개</span></h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 profile-contents profile-btn">
-                    <button type="button">수정</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-12 profile-wrap">
-                  <div class="row">
-                      <div class="col-12">
-                          <h2>창업in 프로필</h2>
-                      </div>
-                  </div>
-                  <div class="row profile-style">
-                    <div class="col-4">
-                      <img src="images/person_1.jpg" alt="사람이미지">
+                    <div class="col-12 text-center community-title">
+                        <h1>창업in 프로필</h1>
                     </div>
-                    <div class="col-8">
-                      <div class="row profile-my-info">
-                        <div class="col-12">
-                          <div class="profile-nickname">
-                            <h2>닉네임 : <span>Whitaker</span></h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="profile-int">
-                            <h2>관심창업분야</h2>
-                            <div class="d-flex align-items-center profile-int-wrap">
-                              <div class="profile-int-item">
-                                <img src="images/icon/fd-moniter.png" alt="이미지">
-                                <p>IT</p>
-                              </div>
-                              <div class="profile-int-item">
-                                <img src="images/icon/fd-education.png" alt="이미지">
-                                <p>교육</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="profile-btn">
-                            <button type="button">수정</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
             </div>
-                <div class="row">
-                    <div class="col-md-6 col-12 profile-wrap mg-0">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>이메일 및 연락처</h2>
+            <div class="w1200">
+                <div class="container-fluid">
+                    <div class="row mp-row">
+                        <div class="col-4 text-center mp-photo">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>프로필사진</h2>
+                                </div>
+                                <div class="col-12">
+                                    <img src="images/person_1.jpg" alt="이미지">
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button type="button" class="btn btn-primary">수정하기</button>
+                                        <button type="button">삭제</button>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
-                        <div class="row">
-                          <div class="col-12 profile-email">
-                            <h2>이메일 : <span>whitakercompany@naver,com</span></h2>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-12 profile-tel">
-                            <h2>휴대전화 : <span>010-4564-6454</span></h2>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-12 profile-btn">
-                            <button type="button">수정</button>
-                          </div>
+                        <div class="col-8 mp-info">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h2>기본정보변경</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mp-nickname">
+                                    <h3>닉네임</h3>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mp-tel">
+                                    <h3>연락처</h3>
+                                    <input type="tel">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mp-email">
+                                    <h3>이메일</h3>
+                                    <div class="d-flex align-items-center">
+                                        <input name="email1" type="text">@<input name="email2" type="text">
+                                        <select name="select_email" id="" onchange="selectEmail(this)">
+                                            <option value="" selected>선택</option>
+                                            <option value="naver.com">naver.com</option>
+                                            <option value="gmail.com">gmail.com</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
