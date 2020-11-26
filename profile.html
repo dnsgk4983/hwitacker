@@ -132,24 +132,21 @@
             <div class="w1200">
                 <div class="container-fluid">
                     <div class="row mp-row">
-                        <div class="col-4 text-center mp-photo">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h2>프로필사진</h2>
-                                </div>
-                                <div class="col-12">
-                                    <img src="images/person_1.jpg" alt="이미지">
-                                </div>
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <button type="button" class="btn btn-primary">수정하기</button>
-                                        <button type="button">삭제</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="text-center mp-photo col-lg-4 col-sm-12">
+                          <div class="row d-flex justify-content-center">
+                            <h1>프로필사진</h1>
+                          </div>
+                          <div class="row d-flex justify-content-center">
+                            <div class="profile-img">
 
+                            </div>
+                          </div>
+                          <div class="row d-flex justify-content-center">
+                                <button class="btn btn-blue-bg">사진변경</button>
+                                <button>삭제</button>
+                          </div>
                         </div>
-                        <div class="col-8 mp-info">
+                        <div class="mp-info col-lg-8 col-sm-12">
                             <div class="row">
                                 <div class="col-12 text-center">
                                     <h2>기본정보변경</h2>
@@ -158,27 +155,220 @@
                             <div class="row">
                                 <div class="col-12 mp-nickname">
                                     <h3>닉네임</h3>
-                                    <input type="text">
+                                    <input type="text" class="input-bg">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mp-tel">
                                     <h3>연락처</h3>
-                                    <input type="tel">
+                                    <input type="tel" class="input-bg">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mp-email">
                                     <h3>이메일</h3>
                                     <div class="d-flex align-items-center">
-                                        <input name="email1" type="text">@<input name="email2" type="text">
-                                        <select name="select_email" id="" onchange="selectEmail(this)">
+                                        <input name="email1" type="text" class="input-bg"><span class="email-margin">@</span><input name="email2" type="text" class="input-bg">
+                                        <select name="select_email" id="" class="input-bg input-text-bg select-l-margin" onchange="selectEmail(this)">
                                             <option value="" selected>선택</option>
                                             <option value="naver.com">naver.com</option>
                                             <option value="gmail.com">gmail.com</option>
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 bg-w border-round top-mg-20">
+                          <div class="row margin-m-20">
+                            <div class="col d-flex startups-align">
+                              <div class="startups-di-v"></div>
+                              <div class="startups-main-text">
+                                <h1 class="text-center">관심창업분야</h1>
+                              </div>
+                              <div class="startups-select-btn">
+                                <button data-toggle="modal" data-target="#myModal">선택하기</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal profile-modal" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <!-- Modal-->
+                                <div class="modal-body pm-body">
+                                    <div class="row md-row">
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-moniter.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>IT</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-travel.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>여행</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-education.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>교육</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-distribution.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>물류</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row md-row">
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-animal.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>반려동물</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-fashion.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>패션</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-robot.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>로봇</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-farming.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>농업</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row md-row">
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-insurance.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>보험</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-food.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>식품</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-contents.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>콘텐츠</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="md-icon">
+                                                <img src="images/icon/fd-health.png" alt="">
+                                            </div>
+                                            <div class="md-text">
+                                                <p>헬스</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row md-footer d-flex justify-content-between">
+                                        <div class="md-x">
+                                            <button type="button" class="x-btn" data-dismiss="modal">취소</button>
+                                        </div>
+                                        <div class="md-o">
+                                            <button type="button">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal -->
+                              </div>
+                            </div>
+                          </div>
+                            <div class="row text-center margin-m-20 padding-b-20">
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="startups-icon">
+                                  <img src="images/startups-icon-01.png" alt="">
+                                </div>
+                                <div class="startups-text">
+                                  <p>IT</p>
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>

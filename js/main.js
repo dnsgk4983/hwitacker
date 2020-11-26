@@ -23,7 +23,52 @@ jQuery(document).ready(function($) {
 		$('.mp-popup').css('display','none');
 	});
 
-	
+	try{Typekit.load({ async: true });}catch(e){}
+	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+	$("#profile-img").click(function() {
+		$("#status-options").toggleClass("active");
+	});
+	$(".expand-button").click(function() {
+	$("#profile").toggleClass("expanded");
+		$("#contacts").toggleClass("expanded");
+	});
+	$("#status-options ul li").click(function() {
+		$("#profile-img").removeClass();
+		$("#status-online").removeClass("active");
+		$("#status-away").removeClass("active");
+		$("#status-busy").removeClass("active");
+		$("#status-offline").removeClass("active");
+		$(this).addClass("active");
+		if($("#status-online").hasClass("active"))
+			$("#profile-img").addClass("online");
+		else if ($("#status-away").hasClass("active"))
+			$("#profile-img").addClass("away");
+		else if ($("#status-busy").hasClass("active"))
+			$("#profile-img").addClass("busy");
+		else if ($("#status-offline").hasClass("active"))
+			$("#profile-img").addClass("offline");
+		else
+			$("#profile-img").removeClass();
+		$("#status-options").removeClass("active");
+	});
+	function newMessage() {
+		message = $(".message-input input").val();
+		if($.trim(message) === '')
+			return false;
+		$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+		$('.message-input input').val(null);
+		$('.contact.active .preview').html('<span>You: </span>' + message);
+		$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+	}
+	$('.submit').click(function() {
+	newMessage();
+	});
+	$(window).on('keydown', function(e) {
+	if (e.which == 13) {
+		newMessage();
+		return false;
+	}
+	});
 
 
 	// 차트
@@ -68,9 +113,6 @@ jQuery(document).ready(function($) {
 			prevEl: '.taker-tab .swiper-button-prev',
 		  },
 	});
-	
-	
-	
 
 
 	"use strict";
@@ -424,6 +466,73 @@ jQuery(document).ready(function($) {
 
 
 	// 메인 슬라이드 slick
-	
+
+
 
 });
+
+function getThumbnailPrivew(html, $target) {
+    if (html.files && html.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $target.css('display', '');
+            //$target.css('background-image', 'url(\"' + e.target.result + '\")'); // 배경으로 지정시
+            $target.html('<img src="' + e.target.result + '" border="0" alt="" />');
+        }
+        reader.readAsDataURL(html.files[0]);
+    }
+}
+
+
+
+
+
+var ctx = document.getElementById('graph').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+    // The data for our dataset
+    data: {
+        labels: ["Iværksætter", "Forandringsagent"],
+        datasets: [{
+            label: "Din ledelsesstil",
+            backgroundColor: [
+                "#ff6d6d", "#3868e8"
+            ],
+            data: [39, 61],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      legend: {
+            display: false,
+        },
+		tooltips: {
+			callbacks: {
+			  label: function(tooltipItem, data) {
+				//get the concerned dataset
+				var dataset = data.datasets[tooltipItem.datasetIndex];
+				//calculate the total of this data set
+				var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+				  return previousValue + currentValue;
+				});
+				//get the current items value
+				var currentValue = dataset.data[tooltipItem.index];
+				//calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+				var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+		  
+				return percentage + "%";
+				}
+			}
+		} 
+	
+	}
+});
+
+
+
+
+
+
+
