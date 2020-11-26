@@ -4065,6 +4065,9 @@ li.replies .chat-content{
   }
 
   @media(max-width:992px) {
+    .main{
+      padding: 10em 0;
+    }
     .writing-left{
       max-width: 100%;
       min-height: auto;
@@ -4558,7 +4561,7 @@ li.replies .chat-content{
 
     /* index */
     .intro--section h2 {
-      font-size: 20px;
+      font-size: .8125em;
     }
 
     /* index */
