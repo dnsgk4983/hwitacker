@@ -3753,6 +3753,7 @@ li.replies .chat-content{
   .menu-left ul {
     max-width: 300px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0;
   }
@@ -3787,7 +3788,7 @@ li.replies .chat-content{
     border: 1px solid #6b6a6a;
     background: #fff;
     border-radius: 1em;
-    padding: .3em 2.2em;
+    padding: .3em 0;
     font-size: 16px;
   }
 
@@ -4011,7 +4012,7 @@ li.replies .chat-content{
     }
 
     .menu-left ul li a {
-      padding: .3em 1em;
+      padding: .3em .75em;
     }
 
     #frame .content .message-input .wrap input{
@@ -4067,6 +4068,27 @@ li.replies .chat-content{
   @media(max-width:992px) {
     .main{
       padding: 10em 0;
+    }
+    .it-search input{
+      padding: 1em 2em;
+    }
+    .it-search input::placeholder{
+      font-size: 1em;
+    }
+    .menu-row{
+      padding: 1em 0;
+    }
+    .idea-box-1{
+      margin-top: 1em;
+    }
+    .menu-left ul{
+      justify-content: center;
+      margin: 1em 0;
+      max-width: 100%;
+    }
+    .menu-left ul > li {
+      width: 30%;
+      margin: 0 1em;
     }
     .writing-left{
       max-width: 100%;
@@ -4402,7 +4424,7 @@ li.replies .chat-content{
 
     /* sub-nav-wrap */
     .sub-nav-wrap .flex-box {
-      width: 200px;
+      width: 150px;
       font-size: 12px;
     }
 
@@ -4602,7 +4624,7 @@ li.replies .chat-content{
       padding: 6px 0 46px 0;
     }
     .sub-nav-wrap .flex-box {
-      width: 150px;
+      width: 100px;
     }
     .community-table table tr{
       line-height: 1.5em;
@@ -4628,3 +4650,35 @@ li.replies .chat-content{
     }
     
   }
+
+.search-items ul{
+  overflow: hidden;
+  width: 100%;
+}
+.search-items ul li{
+  width: 25%;
+  box-sizing: border-box;
+  float: left;
+  list-style-type: none;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+}
+.search-items ul li.activeClass{
+  font-weight: bold;
+  font-size: 20px;
+}
+.sm_select {
+  display: none;
+}
+.sm_select select {
+  width:100%;
+  height: 40px;
+  border-radius: 1em;
+}
+
+
+@media (max-width:1200px){
+      .sm_select {display: block;}
+      .search-items{display: none;}
+ }

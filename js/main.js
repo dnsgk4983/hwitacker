@@ -5,6 +5,26 @@
  });
 
 jQuery(document).ready(function($) {
+	$('.search-item li').first().addClass("activeClass");
+  	$(".tab-contents").not(':first').hide();
+  
+    $('.search-item li').on('click',function(){
+      $(this).addClass("activeClass").siblings().removeClass("activeClass");
+      var link = $(this).find("a").attr("href");
+      var link_num = link.substr(link.length-1);
+      $("select#tabmenu option").eq(link_num-1).prop("selected", "selected");
+      $(".tab-contents").hide();
+      $(link).show();
+    });
+    
+    $("select#tabmenu").on("change",function(){
+      var select_link = $("select#tabmenu").val();
+      var select_num = $(this).prop('selectedIndex');
+      $('.search-item li').eq(select_num).addClass("activeClass").siblings().removeClass('activeClass');
+      $(".tab-contents").hide();
+      $(select_link).show();
+      console.log(select_link);
+    });
 
 	// 인트로 페이지 로그인 팝업 jQuery
 	$('.cta a').on('click', function(){
