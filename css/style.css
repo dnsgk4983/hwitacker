@@ -1961,6 +1961,7 @@
     text-align: center;
     font-size: 1.25em;
     box-sizing: border-box;
+    overflow-y: auto;
 
   }
 
@@ -2268,6 +2269,11 @@
 
   .pm-body {
     padding: 5em 0 3em;
+  }
+  .modal-body .comment{
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   @media (max-width: 1024px) {
@@ -3748,32 +3754,42 @@ li.replies .chat-content{
 
   .menu-row {
     padding: 2em 0;
+    align-items: center;
   }
 
   .menu-left ul {
     max-width: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0;
+    position: relative;
+  }
+  .menu-left ul::after{
+    content: "";
+    position: absolute;
+    right: -5%;
+    width: 1px;
+    height: 100%;
+    background: #999999;
   }
 
-  .bg-blue {
+  .menu-left ul li:first-child{
+    margin-right: 1em;
+  }
+
+  .it-borad--section li.active a{
     background: #18a0fb !important;
     color: #fff;
     border: 1px solid #18a0fb !important;
   }
 
-  .bg-blue:hover {
-    color: #fff;
-  }
-
   .menu-left ul li a {
     display: block;
+    text-align: center;
     border: 1px solid #6b6a6a;
     background: #fff;
     border-radius: 1em;
-    padding: .3em 2.5em;
+    padding: .3em 2em;
     font-size: 16px;
   }
 
@@ -3797,7 +3813,7 @@ li.replies .chat-content{
 
 
   .il-body {
-    height: 230px;
+    height: 270px;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
   }
@@ -3818,8 +3834,8 @@ li.replies .chat-content{
   }
 
   .idea-list {
-    width: 49.5%;
-    max-width: 49.5%;
+    width: 24.5%;
+    max-width: 24.5%;
     border: 1px solid #505050;
     background: #fff;
     border-radius: 1em;
@@ -3836,11 +3852,12 @@ li.replies .chat-content{
 
   .il-btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .il-btn button {
     background: #fff;
+    margin: 0 1em 0 0;
   }
 
   .f-btn {
@@ -3954,6 +3971,26 @@ li.replies .chat-content{
       padding: 5.4375em 5em 6.25em;
     }
   }
+
+  @media(max-width:1640px) {
+    .menu-left ul li a {
+      padding: .3em 1em
+    }
+  }
+
+  @media(max-width: 1500px){
+    #list-m01 .modal-header h4{
+      font-size: 2em;
+    }
+
+  }
+
+  @media(max-width:1240px) {
+    .menu-left ul li a{
+      padding: .3em;
+    }
+  }
+
   @media(min-width:1200px) {
     .taker-wrap{
       max-width: 49.5%;
@@ -3968,6 +4005,10 @@ li.replies .chat-content{
     }
     .foundation-title{
       font-size: .75em;
+    }
+    .idea-list{
+      max-width: 49.5%;
+      width: 49.5%;
     }
 
     /* community */
@@ -4011,9 +4052,7 @@ li.replies .chat-content{
       padding: .3em .5em;
     }
 
-    .menu-left ul li a {
-      padding: .3em .75em;
-    }
+    
 
     #frame .content .message-input .wrap input{
       padding: 0 9em 0 1em;
@@ -4085,10 +4124,6 @@ li.replies .chat-content{
       justify-content: center;
       margin: 1em 0;
       max-width: 100%;
-    }
-    .menu-left ul > li {
-      width: 30%;
-      margin: 0 1em;
     }
     .writing-left{
       max-width: 100%;
@@ -4378,6 +4413,25 @@ li.replies .chat-content{
       height: 3em;
       line-height: 3em;
     }
+    .idea-list{
+      max-width: 100%;
+      width: 100%;
+    }
+    .sec-title{
+      font-size: 1.25em;
+    }
+    .it-search{
+      padding: 1em 0;
+    }
+    .it-search input{
+      padding: .5em 1em;
+    }
+    .menu-row{
+      padding: 0;
+    }
+    .idea-box-1{
+      margin-top: 0;
+    }
 
     /* index */
     .intro--section h2 {
@@ -4475,9 +4529,6 @@ li.replies .chat-content{
     .fd-item{
       padding: 0 .5em;
     }
-    .fd-icon{
-      height: 3em;
-    }
     .fd-item p{
       font-size: .65em;
     }
@@ -4550,8 +4601,8 @@ li.replies .chat-content{
         .user-info-title h2{
           font-size: 24px;
         }
-        .sub-nav-wrap .user-info a{
-          font-size: 1em;
+        .sub-nav-wrap .user-info a, .sub-nav-wrap .flex-box a{
+          font-size: .8125em;
         }
         .profile-contents{
           padding: 0 15px;
@@ -4576,6 +4627,9 @@ li.replies .chat-content{
         }
         .unready h2{
           font-size: 1em;
+        }
+        .fd-icon img{
+          padding: ;
         }
   }
 
@@ -4616,53 +4670,17 @@ li.replies .chat-content{
     
   }
 
-  @media(max-width:280px){
-    #frame .content .message-input .wrap input + i{
-      right: 5.5em;
-    }
-    #frame #sidepanel #contacts ul li.contact{
-      padding: 6px 0 46px 0;
-    }
-    .sub-nav-wrap .flex-box {
-      width: 100px;
-    }
-    .community-table table tr{
-      line-height: 1.5em;
-    }
-    .profile-btn button{
-      padding: .25em .5em;
-    }
-    .profile-wrap .profile-email span{
-      display: block;
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .profile-contents.profile-btn{
-      margin-top: 38px;
-    }
-    .taker--section .taker-wrap{
-      padding: 1em;
-    }
-    .user-name input, .user-email input, .user-phone input{
-      width: 30%;
-    }
-    
-  }
+  
 
 .search-items ul{
   overflow: hidden;
   width: 100%;
 }
 .search-items ul li{
-  width: 25%;
+  width: 8%;
   box-sizing: border-box;
-  float: left;
   list-style-type: none;
-  border: 1px solid #ccc;
   text-align: center;
-  line-height: 40px;
 }
 .search-items ul li.activeClass{
   font-weight: bold;
@@ -4681,4 +4699,59 @@ li.replies .chat-content{
 @media (max-width:1200px){
       .sm_select {display: block;}
       .search-items{display: none;}
+      .menu-left ul::after{
+        display: none !important;
+      }
+      .il-footer p{
+        font-size: .6125em;
+      }
+      .il-footer > p{
+        font-size: .8125em;
+      }
+      .menu-left ul > li {
+        width: 50%;
+      }
+ }
+
+
+ @media(max-width:280px){
+  #frame .content .message-input .wrap input + i{
+    right: 5.5em;
+  }
+  #frame #sidepanel #contacts ul li.contact{
+    padding: 6px 0 46px 0;
+  }
+  .sub-nav-wrap .flex-box {
+    width: 100px;
+  }
+  .community-table table tr{
+    line-height: 1.5em;
+  }
+  .profile-btn button{
+    padding: .25em .5em;
+    font-size: .75em;
+  }
+  .profile-wrap .profile-email span{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .profile-contents.profile-btn{
+    margin-top: 38px;
+  }
+  .taker--section .taker-wrap{
+    padding: 1em;
+  }
+  .user-name input, .user-email input, .user-phone input{
+    width: 30%;
+  }
+  .il-footer > p{font-size: .65em;}
+  .menu-left ul li a{
+    padding: .3em 0;
+  }
+  .menu-left ul li:first-child{
+    margin-right: .5em;
+  }
  }
