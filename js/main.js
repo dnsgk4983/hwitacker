@@ -5,6 +5,37 @@
  });
 
 jQuery(document).ready(function($) {
+	$('.dropdown-toggle').click(function(){
+		$('.dropdown-menu').stop().slideToggle();
+	});
+	var swiper1 = new Swiper('.swiper1', {
+		slidesPerView: 5,
+		spaceBetween: 0,
+		pagination: false,
+		breakpoints: {
+			1200: {
+				slidesPerView: 4,
+				loop: true,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2
+			}
+
+		}
+	});
+
+	var swiper2 = new Swiper('.taker-tab', {
+		slidesPerView: 7,
+		pagination: false,
+		navigation: {
+			nextEl: '.taker-tab .swiper-button-next',
+			prevEl: '.taker-tab .swiper-button-prev',
+		  },
+  });
+
 	$('.search-item li').first().addClass("activeClass");
   	$(".tab-contents").not(':first').hide();
   
@@ -119,20 +150,7 @@ jQuery(document).ready(function($) {
 		$('.info-card').css('display', 'none');
 	  }
 
-	let swiper1 = new Swiper('.swiper1', {
-		slidesPerView: 5,
-		spaceBetween: 0,
-		pagination: false,
-	});
-
-	let swiper2 = new Swiper('.taker-tab', {
-		slidesPerView: 7,
-		pagination: false,
-		navigation: {
-			nextEl: '.taker-tab .swiper-button-next',
-			prevEl: '.taker-tab .swiper-button-prev',
-		  },
-	});
+	
 
 
 	"use strict";

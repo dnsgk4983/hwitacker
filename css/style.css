@@ -1412,7 +1412,7 @@
     position: relative;
     background: #ced4e2;
     height: 50%;
-    width: 90%;
+    width: 100%;
     color: #fff;
     overflow: hidden;
     text-align: center;
@@ -2272,97 +2272,13 @@
   }
   .modal-body .comment{
     max-height: 300px;
+    margin-top: 1em;
+    padding: 0 1em;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
-  @media (max-width: 1024px) {
-    .profile-modal .modal-lg {
-      max-width: 800px;
-    }
-
-    .md-footer {
-      width: 45%;
-    }
-  }
-
-  @media(max-width: 768px) {
-    .profile-modal .modal-lg {
-      max-width: 700px;
-    }
-
-    .pm-body {
-      padding: 2em 1em;
-    }
-
-    .md-row .col .md-icon {
-      padding: 2em 0;
-    }
-
-    .md-footer button {
-      padding: .5em 1.5em;
-      font-size: 20px;
-    }
-  }
-
-  @media(max-width: 540px) {
-    .profile-modal .modal-lg {
-      max-width: 400px;
-      margin: 1.75em auto;
-    }
-
-    .pm-body {
-      padding: 2em 1em;
-    }
-
-    .md-row .col .md-icon {
-      padding: 2em 0;
-    }
-
-    .md-footer {
-      width: 50%;
-    }
-
-    .md-footer button {
-      padding: .5em 1.5em;
-      font-size: 18px;
-    }
-  }
-
-  @media(max-width: 375px) {
-    .profile-modal .modal-lg {
-      max-width: 300px;
-      margin: 1.75em auto;
-    }
-
-    .pm-body {
-      padding: 2em 2em;
-    }
-
-    .md-row {
-      padding-top: 0;
-    }
-
-    .md-row .col .md-icon {
-      padding: 1em 0em;
-    }
-
-    .md-footer {
-      width: 80%;
-    }
-
-    .md-footer button {
-      padding: .5em 1.5em;
-      font-size: 18px;
-    }
-  }
-
-  @media(max-width: 280px) {
-    .md-footer {
-      width: 100%;
-      font-size: 16px;
-    }
-  }
+  
 
 
 
@@ -2543,6 +2459,7 @@
   background: transparent;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 360px) {
   #frame {
@@ -2872,6 +2789,9 @@
   padding: 10px 0 15px 0;
   font-size: 0.9em;
   cursor: pointer;
+}
+#frame #sidepanel #contacts ul li.contact.active{
+  background-color: #fff;
 }
 @media screen and (max-width: 768px) {
   #frame #sidepanel #contacts ul li.contact {
@@ -3328,7 +3248,9 @@ li.replies .chat-content{
     border-radius: 100%;
     margin-right: 2em;
   }
-
+  .modal-pf{
+    align-items: center;
+  }
   .modal-pf p {
     font-size: 40px;
   }
@@ -3398,8 +3320,6 @@ li.replies .chat-content{
   }
 
   .comment-txt {
-    max-width: 390px;
-    width: 100%;
     background: #dddddd;
     font-size: 20px;
     padding: 1em .5em;
@@ -3410,7 +3330,6 @@ li.replies .chat-content{
 
   .comment .row {
     align-items: center;
-    padding: 0 3em;
   }
 
   .comment-send {
@@ -3948,9 +3867,13 @@ li.replies .chat-content{
     background-repeat: no-repeat;
   }
 
+
+
   /*  */
 
-
+  #list-m01 .modal-header{
+    align-items: center;
+  }
 
 
   /* media */
@@ -3976,13 +3899,37 @@ li.replies .chat-content{
     .menu-left ul li a {
       padding: .3em 1em
     }
-  }
-
-  @media(max-width: 1500px){
     #list-m01 .modal-header h4{
       font-size: 2em;
     }
-
+    .modal-pf p{
+      font-size: 1.75em;
+    }
+    #list-m01 .modal-xl{
+      max-width: 90%;
+    }
+    .modal-right{
+      padding: 2em 2em 1em;
+    }
+    .modal-txt-box{
+      font-size: 1.25em;
+    }
+    .ml-btn button{
+      font-size: 1em;
+    }
+    .comment-txt{
+      font-size: 1em;
+      margin-top: 0;
+    }
+    .comment > .d-flex{
+      margin-top: 1em;
+    }
+    .comment-send{
+      margin-top: 29%;
+    }
+    .mbtn{
+      padding: 2em 3em;
+    }
   }
 
   @media(max-width:1240px) {
@@ -3997,6 +3944,10 @@ li.replies .chat-content{
     }
   }
   @media(max-width:1200px) {
+
+    #list-m01 .modal-header h4{
+      font-size: 1.5em;
+    }
     .taker-wrap{
       margin-bottom: 1em;
     }
@@ -4082,6 +4033,153 @@ li.replies .chat-content{
     
   }
 
+  @media (max-width: 1024px) {
+    .profile-modal .modal-lg {
+      max-width: 800px;
+    }
+
+    .md-footer {
+      width: 45%;
+    }
+    .direct{
+      padding: .5em 4em;
+    }
+    .mbtn{
+      padding: 2em 1em;
+    }
+    .modal-img{
+      height: 90%;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .profile-modal .modal-lg {
+      max-width: 700px;
+    }
+
+    .pm-body {
+      padding: 2em 1em;
+    }
+
+    .md-row .col .md-icon {
+      padding: 2em 0;
+    }
+
+    .md-footer button {
+      padding: .5em 1.5em;
+      font-size: 20px;
+    }
+    .ml-btn button{
+      font-size: .75em; 
+    }
+    .pf-img02{
+      width: 2em;
+      height: 2em;
+    }
+    .pf-img03{
+      width: 2em;
+      height: 2em;
+    }
+    .comment-txt{
+      max-width: 200px;
+      font-size: .75em;
+    }
+    .icon-wrap{
+      width: 20px;
+      height: 15px;
+    }
+    .direct{
+      padding: .5em 2em;
+    }
+    .comment-send button{
+      width: 35%;
+    }
+  }
+
+  @media(max-width: 540px) {
+    .profile-modal .modal-lg {
+      max-width: 400px;
+      margin: 1.75em auto;
+    }
+
+    .pm-body {
+      padding: 2em 1em;
+    }
+
+    .md-row .col .md-icon {
+      padding: 2em 0;
+    }
+
+    .md-footer {
+      width: 50%;
+    }
+
+    .md-footer button {
+      padding: .5em 1.5em;
+      font-size: 18px;
+    }
+    .modal-img{
+      border-radius: 1em;
+      height: 200px;
+    }
+    .mbtn{
+      padding: 1em;
+    }
+    .direct{
+      padding: .5em 3em;
+    }
+    .modal-right{
+      padding: 2em 1em;
+    }
+    .modal-pf{
+      margin: 0;
+    }
+    .comment-send{
+      margin-top: 10%;
+    }
+    #list-m01 .modal-header h4{
+      font-size: 1.25em;
+    }
+    #list-m01 .modal-header .close{
+      padding: 0;
+    }
+  }
+
+  @media(max-width: 375px) {
+    .profile-modal .modal-lg {
+      max-width: 300px;
+      margin: 1.75em auto;
+    }
+
+    .pm-body {
+      padding: 2em 2em;
+    }
+
+    .md-row {
+      padding-top: 0;
+    }
+
+    .md-row .col .md-icon {
+      padding: 1em 0em;
+    }
+
+    .md-footer {
+      width: 80%;
+    }
+
+    .md-footer button {
+      padding: .5em 1.5em;
+      font-size: 18px;
+    }
+  }
+
+  @media(max-width: 280px) {
+    .md-footer {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
   @media(max-width:1124px) {
 
     /* community */
@@ -4101,6 +4199,15 @@ li.replies .chat-content{
     /* user-info */
     .user-info-title h2 {
       font-size: 40px;
+    }
+    .modal-pf p{
+      font-size: 1.25em;
+    }
+    .modal-txt-box{
+      font-size: .95em;
+    }
+    .ml-btn{
+      padding: 2em .5em .5em;
     }
   }
 
@@ -4552,8 +4659,27 @@ li.replies .chat-content{
     }
   }
 
-  @media(max-width:414px) {
-
+  @media(max-width: 415px) {
+    .direct{
+      padding: .5em 0;
+    }
+    .sub-nav-wrap .flex-box a{
+      padding: 1em 0;
+    }
+    .comment-send{
+      padding: .75em 1em;
+    }
+    #list-m01 .modal-header h4{
+      font-size: 1em;
+    }
+    .modal-left button{
+      width: 33%;
+    }
+    .icon-wrap{
+      width: 15px;
+      height: 13px;
+    }
+  }
     /* index */
     .intro--section h2 {
       font-size: 22px;
@@ -4577,60 +4703,55 @@ li.replies .chat-content{
     .sub-nav-wrap .flex-box a {
       width: 100%;
     }
-        /* user-info */
-        .user-info-wrap h3 {
-          font-size: .75em;
-          max-width: 5em;
-        }
+    /* user-info */
+    .user-info-wrap h3 {
+      font-size: .75em;
+      max-width: 5em;
+    }
+
+    .user-info-wrap input {
+      font-size: 12px;
+      padding: .5em 0;
+    }
+    .user-info-wrap button{
+      font-size: 8px;
+      padding: .3em .5em;
+    }
+    .user-name input, .user-email input,
+    .user-phone input{
+      width: 50%;
+    }
+    .user-btn-wrap button{
+      font-size: 16px;
+    }
+    .user-info-title h2{
+      font-size: 24px;
+    }
     
-        .user-info-wrap input {
-          font-size: 12px;
-          padding: .5em 0;
-        }
-        .user-info-wrap button{
-          font-size: 8px;
-          padding: .3em .5em;
-        }
-        .user-name input, .user-email input,
-        .user-phone input{
-          width: 50%;
-        }
-        .user-btn-wrap button{
-          font-size: 16px;
-        }
-        .user-info-title h2{
-          font-size: 24px;
-        }
-        .sub-nav-wrap .user-info a, .sub-nav-wrap .flex-box a{
-          font-size: .8125em;
-        }
-        .profile-contents{
-          padding: 0 15px;
-        }
-        .profile-email{
-          padding: 0 15px;
-        }
-        .profile-tel{
-          padding: 0 15px;
-        }
-        .profile-wrap h2{
-          font-size: .65em;
-        }
-        .profile-int-item{
-          margin-right: 1em;
-        }
-        .profile-int-item img{
-          width: 1.5em;
-        }
-        .profile-tel{
-          margin-top: 1em;
-        }
-        .unready h2{
-          font-size: 1em;
-        }
-        .fd-icon img{
-          padding: ;
-        }
+    .profile-contents{
+      padding: 0 15px;
+    }
+    .profile-email{
+      padding: 0 15px;
+    }
+    .profile-tel{
+      padding: 0 15px;
+    }
+    .profile-wrap h2{
+      font-size: .65em;
+    }
+    .profile-int-item{
+      margin-right: 1em;
+    }
+    .profile-int-item img{
+      width: 1.5em;
+    }
+    .profile-tel{
+      margin-top: 1em;
+    }
+    .unready h2{
+      font-size: 1em;
+    }
   }
 
   @media(max-width:375px) {
@@ -4715,6 +4836,26 @@ li.replies .chat-content{
 
 
  @media(max-width:280px){
+  .mbtn-f{
+    padding: 0;
+    justify-content: center;
+  }
+  .mbtn-f p:nth-child(1){
+    margin-right: 1em;
+  }
+  .mbtn-h{
+    padding: 0;
+    justify-content: center;
+  }
+  .mbtn-h p:nth-child(1){
+    margin-right: 1em;
+  }
+  .comment-txt{
+    max-width: 165px;
+  }
+  .ml-btn button{
+    font-size: .65em;
+  }
   #frame .content .message-input .wrap input + i{
     right: 5.5em;
   }
