@@ -531,9 +531,8 @@ var chart = new Chart(ctx, {
     type: 'doughnut',
     // The data for our dataset
     data: {
-        labels: ["Iværksætter", "Forandringsagent"],
+        labels: ["여자", "남자"],
         datasets: [{
-            label: "Din ledelsesstil",
             backgroundColor: [
                 "#ff6d6d", "#3868e8"
             ],
@@ -544,7 +543,7 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {
       legend: {
-            display: false,
+            display: true,
         },
 		tooltips: {
 			callbacks: {
