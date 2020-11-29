@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -68,7 +70,7 @@
           </div>
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-flex align-items-center">
                 <li>
                   <a href="#pricing-section" class="nav-link">
                     <img src="images/icon/ico_search.png" alt="검색아이콘">
@@ -85,37 +87,46 @@
                   </a>
                 </li>
                 <li class="">
-                    <div class="nav-link dropdown" id="dropdown">
-                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/person_1.jpg" alt="사람이미지">Whitaker</button>
-                      <div class="dropdown-menu" role="menu">
-                        <div class="drop-userprofile">
-                          <div class="row align-items-center drop-userinfo">
-                            <div class="col-4 drop-profile-img text-center">
-                              <img src="images/user-profile-none.png" alt="이미지">
-                            </div>
-                            <div class="col-8 drop-profile-content">
-                              <div class="drop-user d-flex align-items-center">
-                                <h3>Whitaker<span> 님</span></h3>
-                                <button type="button" class="btn btn-default">로그아웃</button>
-                              </div>
-                              <p class="">창업 관심 분야</p>
-                              <div class="d-flex align-items-center">
-                                <img src="images/icon/fd-moniter.png" alt="IT">
-                                <img src="images/icon/fd-education.png" alt="교육">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row drop-profile-btn-wrap">
-                            <div class="col-6 drop-btn">
-                              <button href="#" class="my-info">내 정보</button>
-                            </div>
-                            <div class="col-6 drop-btn">
-                              <button href="#" class="my-invite-group">가입한 모임</button>
-                            </div>
-                          </div>
+                  <div class="user-content d-flex align-items-center dropdown">
+                    <div class="user-img">
+                      <img src="images/person_1.jpg" alt="사진">
+                    </div>
+                    <div class="user-text"> <a href="#" class="dropbox"> Whitaker</a></div>
+                  </div>
+
+                  <div class="dropdown-content">
+                    <div class="row user-info-content align-items-center">
+                      <div class="col-4 user-icon text-center">
+                        <img src="images/user-profile-none.png" alt="사용자 아이콘">
+                      </div>
+                      <div class="col-8 user-info text-left">
+                        <div class="d-flex align-items-center">
+                          <h3 class="">Whitaker<span> 님</span></h3>
+                          <button type="button">로그아웃</button>
                         </div>
+                        <div class="user-interest">
+                          <p>창업 관심 분야</p>
+                          <ul class="d-flex align-items-center">
+                            <li>
+                              <img src="images/icon/fd-moniter.png" alt="IT">
+                            </li>
+                            <li>
+                              <img src="images/icon/fd-education.png" alt="교육">
+                            </li>
+                          </ul>
+                        </div>
+
                       </div>
                     </div>
+                    <div class="row user-btn-wrap">
+                      <div class="col-6 btn-wrap">
+                        <a href="#">내 정보</a>
+                      </div>
+                      <div class="col-6 btn-wrap">
+                        <a href="#">가입한 모임</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </nav>

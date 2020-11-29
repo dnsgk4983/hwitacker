@@ -1,10 +1,8 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide',
- 	once: true
- });
+$(function(){
+	$(".dropbox").click(function(){
+		$('.dropdown-content').stop().slideToggle();
+	});
 
-jQuery(document).ready(function($) {
 	$('.dropdown-toggle').click(function(){
 		$('.dropdown-menu').stop().slideToggle();
 	});
@@ -506,7 +504,6 @@ jQuery(document).ready(function($) {
 
 
 	// 메인 슬라이드 slick
-
 
 
 });

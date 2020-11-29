@@ -3875,45 +3875,92 @@ li.replies .chat-content{
     min-width: 400px;
     float: none;
   }
-  .drop-userprofile{
-    width: auto;
-    cursor: auto;
+  /* drop  */
+
+  
+  .dropdown {
+    position: relative;
   }
-  .drop-userinfo{
-    padding: 1em 0; 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    border: 1px solid #D6D6D6;
+    min-width: 400px;
+    z-index: 999 !important;
   }
-  .drop-userprofile .row{
+
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .user-info-content{
+    padding: 1em 0;
+  }
+  .dropdown-content .user-info h3{
     margin: 0;
   }
-  .drop-profile-content .drop-user button{
+
+  .dropdown-content .row{
+    margin: 0;
+  }
+
+  .dropdown-content .user-info h3 span{
+    font-size: .75em;
+    font-weight: lighter;
+  }
+  .dropdown-content .user-info button{
     border: 1px solid #C4C4C4;
-    margin-left: .5 em;
+    background: transparent;
+    margin-left: .5em;
   }
 
-  .drop-user h3{
-    margin-bottom: 0;
-  }
-  .drop-profile-content img{
-    border-radius: 0;
-  }
-
-  .drop-profile-btn-wrap button{
-    width: 100%;
-    height: 3em;
-    border: none;
-  }
-  .drop-profile-btn-wrap{
+  .user-btn-wrap{
     border-top: 1px solid #C4C4C4;
   }
-  .drop-profile-btn-wrap > .drop-btn:first-child{
+  .user-btn-wrap > .col-6{
+    padding: 0;
+  }
+
+  .user-btn-wrap a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 3em;
+  }
+
+  .user-btn-wrap .btn-wrap:nth-child(1) > a{
     border-right: 1px solid #C4C4C4;
   }
 
+  .user-interest li img{
+    height: 1.5em;
+    margin: 0 .5em;
+  }
+
+  .dropdown:hover .dropdown-content {
+    position: absolute !important;
+    display: block; 
+    z-index: 999 !important;
+  }
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  /* drop end  */
 
   /*  */
 
   #list-m01 .modal-header{
     align-items: center;
+  }
+
+  .site-mobile-menu-body > .site-nav-wrap:nth-child(2){
+    display: none;
   }
 
 
@@ -4042,6 +4089,11 @@ li.replies .chat-content{
     /* it-borad */
     .menu-right ul li a {
       padding: .3em .5em;
+    }
+
+    .dropdown-content{
+      position: relative;
+      min-width: 100%;
     }
 
     
@@ -4871,6 +4923,29 @@ li.replies .chat-content{
       }
       .menu-left ul > li {
         width: 50%;
+      }
+      .user-content{
+        padding: 0 20px;
+      }
+      .site-navigation{
+        display: none;
+      }
+      .site-mobile-menu-body > .site-nav-wrap:nth-child(1){
+        display: none;
+      }
+      .site-mobile-menu-body > .site-nav-wrap:nth-child(2){
+        display: block;
+      }
+      .dropdown-content{
+        display: block;
+      }
+      .dropdown-content .user-info h3{
+        display: flex;
+        align-items: center;
+        font-size: .75em;
+      }
+      .dropdown-content .user-info button{
+        font-size: .75em;
       }
  }
 
