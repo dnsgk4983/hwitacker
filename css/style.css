@@ -3732,6 +3732,7 @@ li.replies .chat-content{
 
 
   .il-body {
+    position: relative;
     height: 270px;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
@@ -3812,60 +3813,10 @@ li.replies .chat-content{
     padding: .5em 1em;
   }
 
-  .ilb01 {
-    background: url(../images/borad01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb02 {
-    background: url(../images/borad02.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb03 {
-    background: url(../images/borad03.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb04 {
-    background: url(../images/borad01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb05 {
-    background: url(../images/borad01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb06 {
-    background: url(../images/borad06.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb07 {
-    background: url(../images/borad07.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .ilb08 {
-    background: url(../images/borad08.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  .idea-list > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 
   .dropdown-menu{
@@ -4937,6 +4888,7 @@ li.replies .chat-content{
         display: block;
       }
       .dropdown-content{
+        top: 2em;
         display: block;
       }
       .dropdown-content .user-info h3{
