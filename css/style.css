@@ -1670,8 +1670,8 @@
   .user-info-wrap button {
     border: none;
     color: #FFF;
-    border-radius: 1em;
-    padding: .25em 1.5em;
+    border-radius: 2em;
+    padding: .5em 1.5em;
     background: #236ddc;
     margin-left: 2em;
     outline: none;
@@ -3738,6 +3738,9 @@ li.replies .chat-content{
     border-top-right-radius: 1em;
   }
 
+  .il-body > img{
+    width: 100%;
+  }
   .idea-box-1 {
     margin-top: 2em;
   }
@@ -3871,36 +3874,28 @@ li.replies .chat-content{
     margin-left: .5em;
   }
 
-  .user-btn-wrap{
+  .dropdown-content .user-btn-wrap{
     border-top: 1px solid #C4C4C4;
   }
-  .user-btn-wrap > .col-6{
+  .dropdown-content .user-btn-wrap > .col-6{
     padding: 0;
   }
 
-  .user-btn-wrap a{
+  .dropdown-content  .user-btn-wrap a{
     display: block;
     text-align: center;
     width: 100%;
     height: 3em;
   }
 
-  .user-btn-wrap .btn-wrap:nth-child(1) > a{
+  .dropdown-content .user-btn-wrap .btn-wrap:nth-child(1) > a{
     border-right: 1px solid #C4C4C4;
   }
 
-  .user-interest li img{
-    height: 1.5em;
+  .dropdown-content .user-interest li img{
     margin: 0 .5em;
+    border-radius: 0;
   }
-
-  .dropdown:hover .dropdown-content {
-    position: absolute !important;
-    display: block; 
-    z-index: 999 !important;
-  }
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
   /* drop end  */
 
@@ -3969,6 +3964,12 @@ li.replies .chat-content{
     .mbtn{
       padding: 2em 3em;
     }
+    .user-info-wrap h3{
+      max-width: 5em;
+    }
+    .user-info-wrap>div{
+      justify-content: space-between;
+    }
   }
 
   @media(max-width:1240px) {
@@ -4025,12 +4026,7 @@ li.replies .chat-content{
     }
 
     .user-info-wrap h3 {
-      font-size: 2.75;
-    }
-
-    .user-info-wrap h3 {
       font-size: 24px;
-      max-width: 190px;
     }
 
     .user-info-wrap input {
@@ -4046,7 +4042,9 @@ li.replies .chat-content{
       position: relative;
       min-width: 100%;
     }
-
+    .user-info-wrap input{
+      max-width: 30%;
+    }
     
 
     #frame .content .message-input .wrap input{
@@ -4747,30 +4745,7 @@ li.replies .chat-content{
     .sub-nav-wrap .flex-box a {
       width: 100%;
     }
-    /* user-info */
-    .user-info-wrap h3 {
-      font-size: .75em;
-      max-width: 5em;
-    }
-
-    .user-info-wrap input {
-      font-size: 12px;
-      padding: .5em 0;
-    }
-    .user-info-wrap button{
-      font-size: 8px;
-      padding: .3em .5em;
-    }
-    .user-name input, .user-email input,
-    .user-phone input{
-      width: 50%;
-    }
-    .user-btn-wrap button{
-      font-size: 16px;
-    }
-    .user-info-title h2{
-      font-size: 24px;
-    }
+    
     
     .profile-contents{
       padding: 0 15px;
